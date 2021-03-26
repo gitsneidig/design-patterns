@@ -2,6 +2,7 @@ namespace Instance
 {
     public sealed class ThreadSafeConstructorOneSingleton
     {
+        // resource: https://csharpindepth.com/articles/singleton
 
         private static readonly ThreadSafeConstructorOneSingleton _instance = new ThreadSafeConstructorOneSingleton();
 
