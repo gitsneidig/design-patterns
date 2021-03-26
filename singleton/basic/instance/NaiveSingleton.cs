@@ -12,5 +12,10 @@ namespace Instance
             }
         }
 
+        private NaiveSingleton()
+        {
+
+        }
+
     }
 }
