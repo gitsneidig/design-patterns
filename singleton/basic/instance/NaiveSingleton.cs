@@ -1,17 +1,14 @@
 namespace Instance 
 {
+#nullable enable
     public sealed class NaiveSingleton
     {
-        private static NaiveSingleton _instance;
+        private static NaiveSingleton? _instance;
         public static NaiveSingleton Instance
         {
-            get { 
-                
-                if(_instance == null)
-                {
-                    _instance = new NaiveSingleton();
-                }
-                return _instance; 
+            get {
+
+                return _instance ??= new NaiveSingleton();
             }
         }
 
