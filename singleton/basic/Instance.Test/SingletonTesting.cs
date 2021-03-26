@@ -28,5 +28,19 @@ namespace Instance.Test
 
         }
 
+        [Fact]
+        public void OnlyCallConstructorOnceGivenThreeInstanceCalls()
+        {
+            Assert.Null(SingletonTestHelpers.GetPrivateStaticInstance<NaiveSingleton>());
+
+            var one =   NaiveSingleton.Instance;
+            var two =   NaiveSingleton.Instance;
+            var three = NaiveSingleton.Instance;
+
+            Assert.True(one.Equals(two));
+            Assert.True(two.Equals(three));
+            Assert.True(three.Equals(one));
+
+        }
     }
 }
