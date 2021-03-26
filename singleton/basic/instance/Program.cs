@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace instance
+namespace Instance
 {
     class Program
     {
