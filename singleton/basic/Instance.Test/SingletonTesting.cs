@@ -63,7 +63,7 @@ namespace Instance.Test
                 instances.Add(NaiveSingleton.Instance);
             });
 
-            // This assertion needs work
+            // This assertion needs updated to assert multiple instansiations of the singleton
             Assert.True(instances[0].Equals(instances[1]));
         }
     }
