@@ -1,11 +1,18 @@
 namespace Instance 
 {
-    public class NaiveSingleton
+    public sealed class NaiveSingleton
     {
-
-        public NaiveSingleton() 
+        private static NaiveSingleton _instance;
+        public static NaiveSingleton Instance
         {
-            
+            get { 
+                
+                if(_instance == null)
+                {
+                    _instance = new NaiveSingleton();
+                }
+                return _instance; 
+            }
         }
 
     }
